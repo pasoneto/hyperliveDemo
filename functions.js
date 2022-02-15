@@ -15,8 +15,8 @@ function analyzer(){
 	setTimeout(() => { move(30, tasks[1]); }, 2000);
 	setTimeout(() => { move(50, tasks[2]); }, 5000);
 	setTimeout(() => {
-		document.getElementById("myProgress").style.backgroundColor = "white";
-		document.getElementById("p1").innerHTML = "Hit score is:" + 100;
+		document.getElementById("myProgress").style.backgroundColor = 'rgb(26, 26, 26)';
+    document.getElementById("p1").innerHTML = "Hit Potential score is: <strong><span style='color:rgb(255, 255, 51)'>" + 100 + "</span></strong>";
 	}, 10000)
   } else{
 	  alert("Please, choose a file.")
