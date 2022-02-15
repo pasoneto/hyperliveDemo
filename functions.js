@@ -10,13 +10,13 @@ function dropHandler(ev) {
 function analyzer(){
   var file = document.getElementById("p1").innerHTML;
   if(file !== ''){
-	var tasks = ['Analyzing "'+ file.substring(3, file.length - 4)+'"', "Analyzing artist data...", "Computing hit score"]
+	var tasks = ['Analyzing'+ file.substring(0, file.length - 4), "Analyzing artist data...", "Computing hit score"]
 	move(20, tasks[0])
 	setTimeout(() => { move(30, tasks[1]); }, 2000);
 	setTimeout(() => { move(50, tasks[2]); }, 5000);
 	setTimeout(() => {
 		document.getElementById("myProgress").style.backgroundColor = 'rgb(26, 26, 26)';
-    document.getElementById("p1").innerHTML = "Hit Potential score is: <strong><span style='color:rgb(255, 255, 51)'>" + 100 + "</span></strong>";
+    document.getElementById("p1").innerHTML = "Hit Potential score is: <strong><span style='color:rgb(255, 255, 51)'>" + Math.floor(Math.random() * 100) + "</span></strong>";
 	}, 10000)
   } else{
 	  alert("Please, choose a file.")
