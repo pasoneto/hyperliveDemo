@@ -10,7 +10,7 @@ div {
     top: 0;
     text-align: center;
     left: 0;
-  }
+}
 img {
   width: 50%;
   padding: 20px;
@@ -63,14 +63,37 @@ img {
   background-color: rgb(255, 255, 51);
   color: black;
 }
+.desktopUpload {
+  display: block
+}
+.mobileUpload {
+  display: none
+}
+
 
 @media (max-width:500px) {
   /* For mobile phones: */
   body {
     background-color: lightblue;
   }
-  .button {
-    display: none
+
+  #drop_zone {
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    width: '100%';
+    background-color: white;
+    height: 300px;
+    transition-duration: 0.5s;
+    margin-bottom: 35px;
+  }
+
+  .desktopUpload {
+    display: none;
+  }
+  
+  .mobileUpload {
+    display: block;
   }
 }
 

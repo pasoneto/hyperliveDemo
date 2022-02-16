@@ -8,8 +8,9 @@
 <title>Hit potential scores</title>
 <div>
   <img id="img" src="logo.png">
-  <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-    <p id="drop">Drag a song here...</p>
+  <div id="drop_zone" ondrop="dropHandler(event);" onclick="console.log('oi')" ondragover="dragOverHandler(event);">
+    <p class="desktopUpload">Drag a song here...</p>
+    <p class="mobileUpload">Click here to add a song</p>
   </div>
   <button class="button button1" type="button" onclick="analyzer()">Compute <b>Hit Potential Score</b></button>
   <p id="p1"></p>
