@@ -12,8 +12,8 @@ div {
     left: 0;
   }
 img {
+  width: 50%;
   padding: 20px;
-  height:15%;
   margin-top: 20px;
   margin-bottom: 50px;
 }
@@ -63,3 +63,14 @@ img {
   background-color: rgb(255, 255, 51);
   color: black;
 }
+
+@media (max-width:500px) {
+  /* For mobile phones: */
+  body {
+    background-color: lightblue;
+  }
+  .button {
+    display: none
+  }
+}
+
