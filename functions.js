@@ -20,17 +20,23 @@ function hitPotential(file){
   }
 }
 
+function fileInputName(){
+    var fileName = document.getElementById("input-file").value;
+    var fileName = fileName.split(/(\\|\/)/g).pop();
+		document.getElementById("p1").innerHTML = 'You selected the file: "' + fileName + '"';
+}
+
 function analyzer(){
   var file = document.getElementById("p1").innerHTML;
   var file = file.substring(24, file.length-1)
   if(file !== ''){
-	var tasks = ['Analyzing "'+ file + '"', "Analyzing artist data...", "Computing hit score"]
+	var tasks = ['Analyzing "'+ file + '"', "Analyzing artist data...", "Computing Hit Potential Score"]
 	move(20, tasks[0])
 	setTimeout(() => { move(30, tasks[1]); }, 2000);
 	setTimeout(() => { move(50, tasks[2]); }, 5000);
 	setTimeout(() => {
 		document.getElementById("myProgress").style.backgroundColor = 'rgb(26, 26, 26)';
-    document.getElementById("p1").innerHTML = "Hit Potential score is: <strong><span style='color:rgb(255, 255, 51)'>" + hitPotential(file) + "</span></strong>";
+    document.getElementById("p1").innerHTML = "Hit Potential Score is: <strong><span style='color:rgb(255, 255, 51)'>" + hitPotential(file) + "</span></strong>";
 	}, 10000)
   } else{
 	  alert("Please, choose a file.")

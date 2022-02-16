@@ -2,7 +2,7 @@ body {
   background-color: rgb(26, 26, 26);
 }
 div {
-    justify-content: center;
+    display: block;
     font-size:30px;
     height: 100vh;
     font-family: 'Lato', sans-serif;
@@ -12,13 +12,35 @@ div {
     left: 0;
 }
 img {
-  width: 50%;
+  width: 80%;
   padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 14px;
 }
 #p1{
   color: white 
+}
+#fileSelect{
+  display: none;
+}
+#input-file {
+    display: none;
+    }
+.drop_zone {
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    width: 80%;
+    background-color: white;
+    height: 200px;
+    transition-duration: 0.1s;
+    margin-bottom: 35px;
+}
+.drop_zone:hover {
+  background-color: rgb(255, 255, 51);
+  color: lightgray;
 }
 #myProgress {
   width: 100%;
@@ -30,18 +52,11 @@ img {
   height: 30px;
   background-color: rgb(255, 255, 51);
 }
-#drop_zone {
-  padding: 10px;
-  border-radius: 25px;
-  width: '100%';
-  background-color: white;
-  height: 100px;
-  transition-duration: 0.5s;
-  margin-bottom: 35px;
+.mobile {
+  display: block
 }
-#drop_zone:hover {
-  background-color: rgb(255, 255, 51);
-  color: lightgray;
+.desktop {
+  display: none
 }
 .button {
   border: none;
@@ -58,41 +73,37 @@ img {
 .button1 {
   background-color: white; 
   color: black; 
+  margin: auto;
+  display: block;
 }
 .button1:hover {
   background-color: rgb(255, 255, 51);
   color: black;
 }
-.desktopUpload {
-  display: block
-}
-.mobileUpload {
-  display: none
-}
 
-
-@media (max-width:500px) {
+@media (min-width:500px) {
   /* For mobile phones: */
-  body {
-    background-color: lightblue;
-  }
-
-  #drop_zone {
+  .drop_zone {
+    margin: auto;
     padding: 10px;
     text-align: center;
     border-radius: 25px;
-    width: '100%';
+    width: 80%;
     background-color: white;
-    height: 300px;
+    height: 150px;
     transition-duration: 0.5s;
     margin-bottom: 35px;
   }
-
-  .desktopUpload {
+  img {
+    width: 50%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .mobile {
     display: none;
   }
-  
-  .mobileUpload {
+  .desktop {
     display: block;
   }
 }

@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="styles.css">
 <script type="text/javascript" src="functions.js"></script>
 <title>Hit potential scores</title>
 <div>
   <img id="img" src="logo.png">
-  <div id="drop_zone" ondrop="dropHandler(event);" onclick="console.log('oi')" ondragover="dragOverHandler(event);">
-    <p class="desktopUpload">Drag a song here...</p>
-    <p class="mobileUpload">Click here to add a song</p>
-  </div>
+
+  <label id="uploadArea" class="drop_zone" ondragover="dragOverHandler(event);" ondrop="dropHandler(event);">
+    <input type="file" id="input-file" onchange="fileInputName()" />
+    <p class="desktop">Select a file<br>or drop it here...</p>
+    <p class="mobile">Click here to select a file...</p>
+  </label>
+
   <button class="button button1" type="button" onclick="analyzer()">Compute <b>Hit Potential Score</b></button>
+
   <p id="p1"></p>
   <div id="myProgress">
     <div id="myBar"></div>
