@@ -33,11 +33,11 @@ function analyzer(){
 	var tasks = ['Analyzing "'+ file + '"', "Analyzing artist data...", "Computing Hit Potential Score"]
 	move(20, tasks[0])
 	setTimeout(() => { move(30, tasks[1]); }, 2000);
-	setTimeout(() => { move(50, tasks[2]); }, 5000);
+	setTimeout(() => { move(100, tasks[2]); }, 5000);
 	setTimeout(() => {
 		document.getElementById("myProgress").style.backgroundColor = 'rgb(26, 26, 26)';
     document.getElementById("p1").innerHTML = "Hit Potential Score is: <strong><span style='color:rgb(255, 255, 51)'>" + hitPotential(file) + "</span></strong>";
-	}, 10000)
+	}, 15000)
   } else{
 	  alert("Please, choose a file.")
   }
